@@ -32,13 +32,13 @@ public class EmployeeController {
 	EmployeeService employeeService;
 	@Autowired
 	EmployeeRepo employeeRepo;
-	
+	//to create employee details
 	@PostMapping("/create")
 	Employee createEmployee(@RequestBody Employee employee)
 	{
 		return employeeService.createEmployee(employee);
 	}
-	
+	//to get all the employee details
 	@GetMapping("/getall")
 	public List<Employee> getAllEmployees()
 	{
@@ -52,7 +52,7 @@ public class EmployeeController {
 			return Collections.emptyList();
 		}
 	}
-	
+	//to detail the employee details
 	@DeleteMapping("/delete")
 	public String delete(@RequestParam("id") int id)
 	{
@@ -60,13 +60,13 @@ public class EmployeeController {
 		return "ok";
 	}
 
-
+	//to get the employee details
 	@GetMapping("/get")
 	public Optional<Employee> getEmployee(@RequestParam("id") int id)
 	{
 		return employeeRepo.findById(id);
 	}
-	
+	//to update the employee details
 	@PutMapping("/update")
 	Employee updateEmployee(@RequestParam("id") int id,@RequestBody Employee employee)
 	{
