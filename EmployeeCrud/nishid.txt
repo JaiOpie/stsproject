@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 Hiii From Nishid
 Hii from Jai
-=======
+
 Hiii From Nishid
 
 
 this is for merge conflict
 
 try removing
->>>>>>> branch 'main' of https://github.com/JaiOpie/stsproject.git
+
